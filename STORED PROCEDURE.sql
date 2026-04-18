@@ -1,0 +1,17 @@
+/*
+STORED PROCEDURE
+INOUT
+*/
+
+USE amazone;
+
+DELIMITER //
+CREATE PROCEDURE incre(INOUT A INT)
+BEGIN 
+	SET A = A+10;
+END // DELIMITER ;
+
+SET @val = 100;
+CALL incre(@val);
+SELECT @val;
+
